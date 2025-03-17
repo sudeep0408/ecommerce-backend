@@ -1,0 +1,35 @@
+ecommerce-project/
+├── src/main/java/com/ecommerce/
+│   ├── controller/          # REST APIs (User, Product, Order, Payment)
+│   ├── model/               # Entity classes (User, Product, Order, OrderItem, CartItem)
+│   ├── repository/          # JPA repositories
+│   ├── service/             # Business logic (UserService, ProductService, OrderService, PaymentService)
+│   ├── security/            # JWT-based authentication (SecurityConfig, JWTUtils)
+│   ├── kafka/               # Kafka producer & consumer (Order updates)
+│   ├── config/              # Spring Boot configurations
+│   ├── EcommerceApplication.java  # Main application entry point
+├── src/main/resources/
+│   ├── application.properties  # Database & Kafka configurations
+│   ├── data.sql                # Sample data
+├── Dockerfile
+├── docker-compose.yml
+├── pom.xml
+└── README.md
+
+
+Project Overview
+Technology Stack:
+
+Backend: Java 8, Spring Boot, Spring Security, MySQL, Kafka
+Frontend: (Optional) React/Angular (for UI)
+Build & CI/CD: Git, Jenkins, Docker, OpenShift
+Deployment: OpenShift, Docker containers
+Message Queue: Kafka for event-driven processing
+Core Features:
+
+User Management: Registration, login (JWT-based authentication)
+Product Management: CRUD operations for products
+Shopping Cart: Add/remove products, checkout
+Order Management: Order placement, tracking
+Payment Integration: (Optional: Stripe, PayPal)
+Kafka Events: Order status updates
