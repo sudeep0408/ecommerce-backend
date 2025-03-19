@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn clean package -DskipTests'  // Builds the project
+                bat 'mvn clean package -DskipTests'  // Builds the project
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'  // Runs unit tests
+                bat 'mvn test'  // Runs unit tests
             }
         }
         stage('Deploy') {
